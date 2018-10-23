@@ -1,6 +1,5 @@
 package mx.superq.spring.tester;
-
-public class BluRayPlayer {
+public class BluRayPlayer implements Device {
 	public void turnOn() {
 		System.out.println("Encendiendo BluRay");		
 	}

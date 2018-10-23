@@ -1,6 +1,5 @@
 package mx.superq.spring.tester;
-
-public class MP3Player {
+public class MP3Player implements Device {
 	public void turnOn() {
 		System.out.println("Encendiendo MP3");		
 	}

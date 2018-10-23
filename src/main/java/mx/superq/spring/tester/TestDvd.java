@@ -1,15 +1,13 @@
+
 package mx.superq.spring.tester;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class TestDvd {
 	public static void main(String[] args) {
-		Tester tester = new  Tester();
-		
-		DVDPlayer dvd = new DVDPlayer();
-		tester.testDvd(dvd);
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-		MP3Player mp3 = new MP3Player();
-		tester.testMp3(mp3);
-		
-		BluRayPlayer bluRay= new BluRayPlayer();
-		tester.testBluRay(bluRay);
+		Tester tester = applicationContext.getBean("tester", Tester.class);	
+		tester.test();
 	}
 }

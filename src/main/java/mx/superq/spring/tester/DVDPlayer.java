@@ -1,5 +1,5 @@
 package mx.superq.spring.tester;
-public class DVDPlayer {
+public class DVDPlayer implements Device {
 	public void turnOn() {
 		System.out.println("DVD Encendido");		
 	}
