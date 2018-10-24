@@ -5,16 +5,18 @@ public class TestDvd {
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-		Tester tester = applicationContext.getBean("testerDvd", Tester.class);	
+		Tester tester = applicationContext.getBean("tester", Tester.class);	
+		Banda banda = applicationContext.getBean("banda", Banda.class);
+		Rock rock = applicationContext.getBean("rock", Rock.class);
+		
+		
+		MP3Player mp3Player = applicationContext.getBean("mp3Player", MP3Player.class);
+		mp3Player.setPlayList(banda);
+		tester.setDevice(mp3Player);		
 		tester.test();
 		
-		 tester = applicationContext.getBean("testerBluRay", Tester.class);	 
-		 tester.test();
-		 
-		 tester = applicationContext.getBean("testerMp3", Tester.class);	
-		 tester.test();
-		 
-		 tester = applicationContext.getBean("testerSmartPhon", Tester.class);	
-		 tester.test();
+		mp3Player.setPlayList(rock);			
+		tester.test();
+
 	}
 }

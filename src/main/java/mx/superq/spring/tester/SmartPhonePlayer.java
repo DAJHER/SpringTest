@@ -1,6 +1,6 @@
 package mx.superq.spring.tester;
 import org.springframework.stereotype.Component;
-@Component("tester")
+@Component("smartPhonePlayer")
 public class SmartPhonePlayer implements Device {
 	public void turnOn() {
 		System.out.println("SmartPhone Encendido");		

@@ -1,6 +1,6 @@
 package mx.superq.spring.tester;
 import org.springframework.stereotype.Component;
-@Component("tester")
+@Component("banda")
 public class Banda implements PlayList {
 	@Override
 	public String getName() {

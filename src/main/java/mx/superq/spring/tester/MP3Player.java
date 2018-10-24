@@ -1,6 +1,8 @@
 package mx.superq.spring.tester;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
-@Component("tester")
+@Component("mp3Player")
 public class MP3Player implements Device {
 	private PlayList playList;
 	public void turnOn() {
@@ -15,6 +17,8 @@ public class MP3Player implements Device {
 	public void turnOff() {
 		System.out.println("Apagando MP3");		
 	}
+	@Autowired
+	@Qualifier("rock")
 	public void setPlayList(PlayList playList) {
 		this.playList = playList;
 	}

@@ -1,6 +1,6 @@
 package mx.superq.spring.tester;
 import org.springframework.stereotype.Component;
-@Component("tester")
+@Component("dvdPlayer")
 public class DVDPlayer implements Device {
 	public void turnOn() {
 		System.out.println("DVD Encendido");		

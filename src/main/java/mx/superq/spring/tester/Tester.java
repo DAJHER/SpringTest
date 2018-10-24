@@ -9,6 +9,8 @@ public class Tester {
 		device.stop();
 		device.turnOff();
 	}
+	//@Autowired
+	//@Qualifier("dvdPlayer")
 	public void setDevice(Device device) {
 		this.device = device;
 	}	
