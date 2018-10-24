@@ -1,4 +1,6 @@
 package mx.superq.spring.tester;
+import org.springframework.stereotype.Component;
+@Component("tester")
 public class MP3Player implements Device {
 	private PlayList playList;
 	public void turnOn() {

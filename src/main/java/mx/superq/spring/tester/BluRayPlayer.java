@@ -1,4 +1,6 @@
 package mx.superq.spring.tester;
+import org.springframework.stereotype.Component;
+@Component("tester")
 public class BluRayPlayer implements Device {
 	public void turnOn() {
 		System.out.println("Encendiendo BluRay");		
